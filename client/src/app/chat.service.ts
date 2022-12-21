@@ -11,7 +11,7 @@ export class ChatService {
   public message$: BehaviorSubject<string> = new BehaviorSubject('');
   constructor() {}
 
-  socket = io('https://c862-72-255-39-71.in.ngrok.io/');
+  socket = io('http://localhost:3000');
 
   public sendMessage(message: any) {
     this.socket.emit('message', message);
